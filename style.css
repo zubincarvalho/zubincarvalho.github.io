@@ -234,6 +234,34 @@ main, .nav, .footer { position: relative; z-index: 1; }
 }
 
 /* ============================================================
+   TECHNICAL SKILLS
+   ============================================================ */
+.skills { display: flex; flex-direction: column; }
+.skill-group {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 1.25rem;
+  padding: 1.4rem 0;
+  border-bottom: 1px solid var(--line);
+  align-items: start;
+}
+.skill-group:first-child { padding-top: 0; }
+.skill-group__label {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  padding-top: 0.3rem;
+  font-weight: 500;
+}
+.skill-group .tags { margin-top: 0; }
+
+@media (max-width: 760px) {
+  .skill-group { grid-template-columns: 1fr; gap: 0.6rem; }
+  .skill-group__label { padding-top: 0; }
+}
+
+/* ============================================================
    GALLERIES (design + personal)
    ============================================================ */
 .gallery {

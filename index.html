@@ -29,8 +29,9 @@
     <a href="#top" class="nav__name">ZC</a>
     <nav class="nav__links">
       <a href="#about">About</a>
-      <a href="#research">Research &amp; Projects</a>
+      <a href="#projects">Projects</a>
       <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
       <a href="#design">Design</a>
       <a href="#personal">Personal</a>
       <a href="#contact">Contact</a>
@@ -52,7 +53,6 @@
       </p>
       <div class="hero__meta reveal">
         <span>Stanford, CA</span>
-        <span>Available for Summer 2026</span>
       </div>
     </section>
 
@@ -62,14 +62,16 @@
     <section class="section" id="about">
       <div class="section__label"><span class="num">01</span> About</div>
       <div class="section__body">
-        <!-- EDIT THIS: write a short bio. A few sentences is enough. -->
         <p class="lead">
-          Write a short introduction here. Who you are, what you care about,
-          and what you are working toward.
+          I'm an undergraduate at Stanford studying Computer Science (AI track)
+          and Management Science &amp; Engineering, building at the intersection
+          of machine learning and the physical world.
         </p>
         <p>
-          Add a second paragraph if you want more room. Keep it to the things
-          you want a reader to remember.
+          My work spans robotics world models, medical imaging, clinical NLP,
+          and tools for wildfire safety. Outside of research I analyze equities
+          for Stanford's student-run endowment fund, and spend time on CAD,
+          woodworking, and design. I grew up in Hemet, California.
         </p>
       </div>
     </section>
@@ -78,55 +80,93 @@
          RESEARCH & PROJECTS
          Duplicate a .entry block to add another item.
          ============================================================ -->
-    <section class="section" id="research">
-      <div class="section__label"><span class="num">02</span> Research &amp; Projects</div>
+    <section class="section" id="projects">
+      <div class="section__label"><span class="num">02</span> Projects</div>
       <div class="section__body">
         <div class="entry-list">
 
           <article class="entry">
             <div class="entry__year">2026</div>
             <div class="entry__main">
-              <h3 class="entry__title">Project title</h3>
+              <h3 class="entry__title">Object-Centric World Models</h3>
               <p class="entry__desc">
-                One or two sentences describing the project, the approach, and
-                the outcome.
+                World models that help robots anticipate how objects move and
+                interact during manipulation tasks like grasping and stacking.
+                Adapts the JEPA architecture over object tokens on the LIBERO
+                benchmark, using a slot-attention tokenizer and an
+                action-conditioned transformer predictor; extending the work
+                toward publication.
               </p>
               <div class="tags">
-                <span>Tag</span><span>Tag</span><span>Tag</span>
+                <span>PyTorch</span><span>JEPA</span><span>Slot Attention</span><span>Robotics</span>
               </div>
             </div>
-            <!-- Optional link. Delete if not needed. -->
-            <a class="entry__link" href="#">View →</a>
+          </article>
+
+          <article class="entry">
+            <div class="entry__year">2026</div>
+            <div class="entry__main">
+              <h3 class="entry__title">ACL Tear Detection from Knee MRI</h3>
+              <p class="entry__desc">
+                End-to-end deep learning pipeline detecting ACL tears from knee
+                MRI scans on the Stanford MRNet dataset. Fine-tuned ResNet18
+                across sagittal, coronal, and axial views with a learned logistic
+                combiner, exceeding a PCA + logistic regression baseline by a
+                substantial margin.
+              </p>
+              <div class="tags">
+                <span>PyTorch</span><span>ResNet18</span><span>Medical Imaging</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="entry">
+            <div class="entry__year">2026</div>
+            <div class="entry__main">
+              <h3 class="entry__title">SOAP Note Generator</h3>
+              <p class="entry__desc">
+                NLP pipeline converting doctor-patient dialogue into structured
+                four-section SOAP notes on the MTS-Dialog corpus. Stage one
+                extracts clinical entities and routes them to the correct section;
+                stage two generates clinical prose with a DSPy-based LLM agent,
+                evaluated against published baselines.
+              </p>
+              <div class="tags">
+                <span>NLP</span><span>DSPy</span><span>scikit-learn</span>
+              </div>
+            </div>
           </article>
 
           <article class="entry">
             <div class="entry__year">2025</div>
             <div class="entry__main">
-              <h3 class="entry__title">Project title</h3>
+              <h3 class="entry__title">California Wildfire Evacuation &amp; Risk Dashboard</h3>
               <p class="entry__desc">
-                One or two sentences describing the project, the approach, and
-                the outcome.
+                An evacuation and wildfire-risk dashboard for California, mapping
+                live fire perimeters, evacuation zones, and area risk to surface
+                clear guidance during fast-moving events. A personal project,
+                shaped by being directly affected by the 2022 Fairview Fire in
+                Hemet, CA.
               </p>
               <div class="tags">
-                <span>Tag</span><span>Tag</span>
+                <span>React</span><span>Geospatial</span><span>Data Viz</span>
               </div>
             </div>
-            <a class="entry__link" href="#">View →</a>
           </article>
 
           <article class="entry">
             <div class="entry__year">2025</div>
             <div class="entry__main">
-              <h3 class="entry__title">Project title</h3>
+              <h3 class="entry__title">AI Surf Condition &amp; Safety</h3>
               <p class="entry__desc">
-                One or two sentences describing the project, the approach, and
-                the outcome.
+                A site that forecasts surf conditions and flags safety hazards —
+                swell, wind, tide, and rip-current risk — to help surfers decide
+                when and where it is safe to paddle out.
               </p>
               <div class="tags">
-                <span>Tag</span><span>Tag</span>
+                <span>Machine Learning</span><span>Forecasting</span><span>Web</span>
               </div>
             </div>
-            <a class="entry__link" href="#">View →</a>
           </article>
 
         </div>
@@ -143,37 +183,95 @@
         <div class="entry-list">
 
           <article class="entry">
-            <div class="entry__year">Year</div>
+            <div class="entry__year">2024 — Present</div>
             <div class="entry__main">
-              <h3 class="entry__title">Role</h3>
-              <p class="entry__org">Organization &middot; Location</p>
+              <h3 class="entry__title">Equity Analyst</h3>
+              <p class="entry__org">Charles R. Blyth Investment Fund &middot; Stanford, CA</p>
               <p class="entry__desc">
-                A line on what you did and what you delivered.
+                Analyst for Stanford's student-run endowment fund supporting
+                financial aid, covering technology and small-cap names across AI,
+                data centers, and healthcare. Run DCF and comparable-company
+                valuation alongside qualitative diligence on business quality,
+                downside risk, and management.
               </p>
             </div>
           </article>
 
           <article class="entry">
-            <div class="entry__year">Year</div>
+            <div class="entry__year">2025</div>
             <div class="entry__main">
-              <h3 class="entry__title">Role</h3>
-              <p class="entry__org">Organization &middot; Location</p>
+              <h3 class="entry__title">Undergraduate Researcher</h3>
+              <p class="entry__org">Freeman Spogli Institute &middot; Stanford, CA</p>
               <p class="entry__desc">
-                A line on what you did and what you delivered.
+                Studied adoption of Kaigo robotics in Japanese long-term care
+                facilities, modeling assistive-technology deployment against
+                patient outcomes across 200+ facility-year observations. Built
+                SQL ETL pipelines and mixed-effects regression models in R,
+                improving accuracy 12% over baseline.
               </p>
             </div>
           </article>
 
           <article class="entry">
-            <div class="entry__year">Year</div>
+            <div class="entry__year">2024</div>
             <div class="entry__main">
-              <h3 class="entry__title">Role</h3>
-              <p class="entry__org">Organization &middot; Location</p>
+              <h3 class="entry__title">Medical Assistant Intern</h3>
+              <p class="entry__org">California Ear Nose &amp; Throat &middot; Hemet, CA</p>
               <p class="entry__desc">
-                A line on what you did and what you delivered.
+                Supported patient intake, clinical documentation, and exam-room
+                workflow; prepared clinical instruments and assisted with
+                rhinoscopy procedures. Engineered a full-stack patient management
+                system using React and Node.js.
               </p>
             </div>
           </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         TECHNICAL SKILLS
+         ============================================================ -->
+    <section class="section" id="skills">
+      <div class="section__label"><span class="num">04</span> Technical Skills</div>
+      <div class="section__body">
+        <div class="skills">
+
+          <div class="skill-group">
+            <h3 class="skill-group__label">Languages</h3>
+            <div class="tags">
+              <span>Python</span><span>Java</span><span>JavaScript</span><span>TypeScript</span><span>C / C++</span><span>SQL</span><span>R</span><span>HTML / CSS</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <h3 class="skill-group__label">ML &amp; AI</h3>
+            <div class="tags">
+              <span>PyTorch</span><span>scikit-learn</span><span>TensorFlow</span><span>HuggingFace Transformers</span><span>DSPy</span><span>ResNet &amp; CNNs</span><span>Transfer Learning</span><span>JEPA / Slot Attention</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <h3 class="skill-group__label">Tools &amp; Web</h3>
+            <div class="tags">
+              <span>Git</span><span>Docker</span><span>FastAPI</span><span>React</span><span>Node.js</span><span>AWS Cloud</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <h3 class="skill-group__label">Financial Modeling</h3>
+            <div class="tags">
+              <span>DCF &amp; Valuation</span><span>Mixed-Effects Regression</span><span>Excel</span><span>PowerPoint</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <h3 class="skill-group__label">Design &amp; Making</h3>
+            <div class="tags">
+              <span>CAD</span><span>Autodesk Fusion 360</span><span>Architecture Design</span><span>3D Printing</span><span>Woodworking</span>
+            </div>
+          </div>
 
         </div>
       </div>
@@ -189,7 +287,7 @@
            </figure>
          ============================================================ -->
     <section class="section" id="design">
-      <div class="section__label"><span class="num">04</span> Design Portfolio</div>
+      <div class="section__label"><span class="num">05</span> Design Portfolio</div>
       <div class="section__body">
         <p class="lead">Architecture, CAD, and robotics.</p>
         <div class="gallery">
@@ -226,7 +324,7 @@
          Same image instructions as the Design section above.
          ============================================================ -->
     <section class="section" id="personal">
-      <div class="section__label"><span class="num">05</span> Personal</div>
+      <div class="section__label"><span class="num">06</span> Personal</div>
       <div class="section__body">
         <p class="lead">Art and photography.</p>
         <div class="gallery gallery--tall">
@@ -254,7 +352,7 @@
          CONTACT
          ============================================================ -->
     <section class="section section--contact" id="contact">
-      <div class="section__label"><span class="num">06</span> Contact</div>
+      <div class="section__label"><span class="num">07</span> Contact</div>
       <div class="section__body">
         <p class="contact__line">Reach me here.</p>
         <ul class="contact__list">
