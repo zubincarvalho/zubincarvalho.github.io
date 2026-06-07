@@ -101,6 +101,24 @@ main, .nav, .footer { position: relative; z-index: 1; }
   max-width: var(--maxw);
   margin: 0 auto;
   padding: clamp(4rem, 14vh, 9rem) var(--pad) clamp(3rem, 9vh, 6rem);
+  display: flex;
+  align-items: center;
+  gap: clamp(1.5rem, 5vw, 4rem);
+}
+.hero__text { flex: 1 1 auto; min-width: 0; }
+.hero__photo {
+  flex: 0 0 auto;
+  width: clamp(230px, 34vw, 400px);
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 18px 40px -22px rgba(31, 27, 22, 0.55);
+}
+.hero__photo img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center 28%;
 }
 .eyebrow {
   font-family: var(--mono);
@@ -384,6 +402,8 @@ main, .nav, .footer { position: relative; z-index: 1; }
    RESPONSIVE
    ============================================================ */
 @media (max-width: 760px) {
+  .hero { flex-direction: column-reverse; align-items: flex-start; }
+  .hero__photo { width: clamp(160px, 48vw, 240px); }
   .section { grid-template-columns: 1fr; }
   .section__label { position: static; }
   .entry { grid-template-columns: 1fr; gap: 0.35rem; }
